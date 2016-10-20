@@ -1,8 +1,11 @@
 # ClaimCompass Redux
+
+[![NPM](https://nodei.co/npm/@claimcompass/cc-redux.png)](https://nodei.co/npm/@claimcompass/cc-redux)
+
 Utility functions for reducing redux boilerplate.
 
 ```
-npm install @claimcompass/cc-redux
+npm install --save @claimcompass/cc-redux
 ```
 
 ## Usage
@@ -11,7 +14,7 @@ npm install @claimcompass/cc-redux
 
 Creates an action creator. **Example:**
 
-```
+```js
 import { create } from '@claimcompass/cc-redux'
 
 // no creator function specified - equivalent to using the identity function
@@ -29,7 +32,7 @@ Creates a redux reducer. The actionMap object is a plain object containing
 action types as keys. The object MUST also contain a key `default` which returns
 the initial state. **Example:**
 
-```
+```js
 import { handle } from '@claimcompass/cc-redux'
 import * as types from './actions'
 
@@ -49,7 +52,7 @@ applied. Currently the following middleware is applied by default:
 - thunk
 
 **Example:**
-```
+```js
 import { applyMiddleware } from '@claimcompass/cc-redux'
 import { createStore } from 'redux'
 import reducer from './reducers'

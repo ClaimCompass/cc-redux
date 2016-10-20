@@ -1,0 +1,39 @@
+{
+  "name": "@claimcompass/cc-redux",
+  "version": "0.0.1-alpha.0",
+  "description": "Utility functions for reducing redux boilerplate.",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "node_modules/.bin/eslint src",
+    "build": "node_modules/.bin/babel src --out-dir dist",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "npm run lint && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ClaimCompass/cc-redux.git"
+  },
+  "author": "ClaimCompass",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ClaimCompass/cc-redux/issues"
+  },
+  "homepage": "https://github.com/ClaimCompass/cc-redux#readme",
+  "devDependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-core": "^6.16.0",
+    "babel-eslint": "^7.0.0",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-stage-2": "^6.16.0",
+    "eslint": "^3.6.1",
+    "eslint-config-standard": "^6.2.0",
+    "eslint-loader": "^1.5.0",
+    "eslint-plugin-promise": "^2.0.1",
+    "eslint-plugin-standard": "^2.0.1"
+  },
+  "dependencies": {
+    "redux": "^3.6.0",
+    "thunk": "0.0.1"
+  }
+}

@@ -38,7 +38,7 @@ const user = handle({
 
   [types.editUser]: (state, { user }) => ({ ...state, ...user })
 
-  'default': {}
+  'default': (state, action) => ({})
 })
 ```
 
@@ -55,4 +55,10 @@ import { createStore } from 'redux'
 import reducer from './reducers'
 
 const store = createStore(reducer, applyMiddleware())
+```
+
+## Testing
+
+```
+npm run build && npm run test
 ```

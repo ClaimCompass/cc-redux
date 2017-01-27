@@ -4,6 +4,6 @@ export default function handle (initial = {}, actionMap = {}) {
       return actionMap[action.type](state, action)
     }
 
-    return state
+    return actionMap.default ? actionMap.default(state, action) : state
   }
 }

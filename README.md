@@ -36,10 +36,13 @@ import { handle } from '@claimcompass/cc-redux'
 import * as types from './actions'
 
 const user = handle({ firstname: 'John' }, {
-
   [types.initUser]: (state, { user }) => ({ ...user }),
 
   [types.editUser]: (state, { user }) => ({ ...state, ...user })
+
+  // the default method is invoked if the dispatched action does not matched any of
+  // the actions above
+  default: (state, action) => state
 })
 ```
 

@@ -14,7 +14,7 @@ const fetchUser = () => dispatch => Promise.resolve({ user: asyncUser }).then(re
   dispatch(initUser(res))
 })
 
-const reducer = handle({
+const reducer = handle({}, {
   [initUser]: (state, { user }) => ({ ...user }),
 
   default: (state, action) => ({ initial: true })
